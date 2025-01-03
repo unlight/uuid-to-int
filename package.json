@@ -21,8 +21,12 @@
     "build": "sh Taskfile buildMicrobundle4"
   },
   "devDependencies": {
-    "@types/node": "^22.10.4",
+    "@types/node": "^22.10.5",
     "microbundle": "^0.15.1",
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.2.1"
   }
 }
