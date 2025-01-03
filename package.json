@@ -1,15 +1,23 @@
 {
-  "name": "uuid-to-number",
+  "name": "uuid-to-int",
   "version": "0.0.0-dev",
+  "description": "Converts UUID (GUID) to integer",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/uuid-to-number.cjs",
-  "module": "./dist/uuid-to-number.mjs",
+  "main": "./dist/uuid-to-int.cjs",
+  "module": "./dist/uuid-to-int.mjs",
   "types": "./dist/index.d.ts",
+  "repository": "https://github.com/unlight/uuid-to-int.git",
+  "keywords": [
+    "uuid",
+    "guid",
+    "integer",
+    "uuid-convertor"
+  ],
   "exports": {
     ".": {
-      "import": "./dist/uuid-to-number.mjs",
-      "require": "./dist/uuid-to-number.cjs"
+      "import": "./dist/uuid-to-int.mjs",
+      "require": "./dist/uuid-to-int.cjs"
     }
   },
   "scripts": {

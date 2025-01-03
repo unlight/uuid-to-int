@@ -1,15 +1,19 @@
 type ToStringArg = { toString(): string };
 
-export function uuidToNumber(value: ToStringArg): string {
+export function uuidToInt(value: ToStringArg): string {
   if (value == null) throw new TypeError('Cannot convert null or undefined');
+  if (typeof value.toString !== 'function')
+    throw new TypeError('Value do not implements toString');
   const string = value.toString().replaceAll('-', '');
   const result = BigInt('0x' + string).toString();
 
   return result;
 }
 
-export function numberToUuid(value: ToStringArg): string {
+export function intToUuid(value: ToStringArg): string {
   if (value == null) throw new TypeError('Cannot convert null or undefined');
+  if (typeof value.toString !== 'function')
+    throw new TypeError('Value do not implements toString');
   const number = value.toString();
   const string = BigInt(number).toString(16).padStart(32, '0');
   const part1 = string.slice(0, 8);
