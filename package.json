@@ -1,0 +1,28 @@
+{
+  "name": "uuid-to-number",
+  "version": "0.0.0-dev",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/uuid-to-number.cjs",
+  "module": "./dist/uuid-to-number.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/uuid-to-number.mjs",
+      "require": "./dist/uuid-to-number.cjs"
+    }
+  },
+  "scripts": {
+    "start": "node --experimental-transform-types src/index.ts",
+    "test": "npm run test:r",
+    "test:r": "node --experimental-transform-types --test src/*.spec.ts",
+    "test:w": "node --experimental-transform-types --test --watch src/*.spec.ts",
+    "test:cov": "node --experimental-transform-types --test --experimental-test-coverage src/*.spec.ts",
+    "build": "sh Taskfile buildMicrobundle4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.4",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.4.2"
+  }
+}
